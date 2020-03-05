@@ -45,7 +45,7 @@ const spacesRE = /\s+/
 
 // Build a Tooltip config based on bindings (if any)
 // Arguments and modifiers take precedence over passed value config object
-const parseBindings = (bindings, vnode) => /* istanbul ignore next: not easy to test */ {
+const parseBindings = (bindings, vnode) => {
   // We start out with a basic config
   const NAME = 'BTooltip'
   // Default config

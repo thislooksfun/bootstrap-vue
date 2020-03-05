@@ -15,12 +15,12 @@ const NAME = 'BVPopper'
 
 const AttachmentMap = {
   AUTO: 'auto',
-  TOP: 'top',
+  TOP: 'bottom',
   RIGHT: 'right',
   BOTTOM: 'bottom',
   LEFT: 'left',
-  TOPLEFT: 'top',
-  TOPRIGHT: 'top',
+  TOPLEFT: 'bottom',
+  TOPRIGHT: 'bottom',
   RIGHTTOP: 'right',
   RIGHTBOTTOM: 'right',
   BOTTOMLEFT: 'bottom',
@@ -198,6 +198,8 @@ export const BVPopper = /*#__PURE__*/ Vue.extend({
       this.popperDestroy()
       // We use `el` rather than `this.$el` just in case the original
       // mountpoint root element type was changed by the template
+      console.log('Making popper with config:')
+      console.log(this.popperConfig)
       this.$_popper = new Popper(this.target, el, this.popperConfig)
     },
     popperDestroy() {
